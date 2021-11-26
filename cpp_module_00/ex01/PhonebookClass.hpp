@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:01:58 by thoberth          #+#    #+#             */
-/*   Updated: 2021/11/24 21:42:09 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:21:25 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,24 @@
 # define PHONEBOOKCLASS_HPP
 
 #include <iostream>
+#include <limits>
 
 class PhonebookClass
 {
 private:
 	/* data */
 public:
-	int tab[8]; //ceci est un attribut membre
+	std::string first_name; //ceci est un attribut membre
+	std::string last_name;
+	std::string nick_name;
+	int	number;
+	std::string darkest_secret;
 
-	PhonebookClass();
-	~PhonebookClass();
+	PhonebookClass(); // Constructeur
+	~PhonebookClass(); // Destructeur
 
-	void	func(void); //ceci est une fonction membre
+	void	add(void); //ceci est une fonction membre
+	void	search(PhonebookClass instance[8], int nbr_membre);
 };
 
 #endif

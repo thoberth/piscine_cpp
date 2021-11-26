@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/11/24 12:15:36 by thoberth         ###   ########.fr        #
+#    Updated: 2021/11/24 22:34:39 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = clang++
 
 FLAG = -Wall -Wextra -Werror
 
-$(NAME):
+${NAME}:
 	${CC} -o ${NAME} ${FLAG} ${SRC}
 
 all: ${NAME}

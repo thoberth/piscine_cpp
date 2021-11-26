@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:07:03 by thoberth          #+#    #+#              #
-#    Updated: 2021/11/24 21:51:31 by thoberth         ###   ########.fr        #
+#    Updated: 2021/11/25 17:11:55 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ${NAME}:
 
 all: ${NAME}
 
-fclean: clean
+fclean:
 	${RM} ${NAME}
 
 re: fclean all
