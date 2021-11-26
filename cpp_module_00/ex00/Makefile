@@ -23,7 +23,7 @@ ${NAME}:
 
 all: ${NAME}
 
-fclean: clean
+fclean:
 	${RM} ${NAME}
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:26:13 by thoberth          #+#    #+#             */
-/*   Updated: 2021/11/26 16:11:04 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/11/26 18:10:04 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 	PhonebookClass instance[8];
 
 
-	for (;;) // boucle infinie
+	for (;;) // boucle infinie avec for
 	{
 		std::cin >> cmd;
 		std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' );
@@ -31,8 +31,8 @@ int main()
 				std::cout << "You don't have any more space" << std::endl;
 			else
 			{
-				nbr_membre++;
 				instance[nbr_membre].add();
+				nbr_membre++;
 			}
 		}
 		else if (cmd == "SEARCH")

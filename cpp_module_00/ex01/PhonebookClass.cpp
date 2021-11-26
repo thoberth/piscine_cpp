@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:01:56 by thoberth          #+#    #+#             */
-/*   Updated: 2021/11/26 16:06:46 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/11/26 18:32:04 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,59 @@ void	PhonebookClass::add(void)
 	std::getline(std::cin, this->darkest_secret);
 }
 
-void	PhonebookClass::search(PhonebookClass instance[8], int nbr_membre)
+int	PhonebookClass::search(PhonebookClass instance[8], int nbr_membre)
 {
-	(void)instance;
-	(void)nbr_membre;
-	std::cout << "CA COOOOOOMPILE" << std::endl;
+	int	i;
+
+	i = 0;
+	if (nbr_membre > 0)
+		std::cout << "     index|first name| last name|  nickname|" << std::endl;
+	else
+	{
+		std::cout << "You have any contact yet!" << std::endl;
+		return (0);
+	}
+	while (i < nbr_membre)
+	{
+		std::cout << std::setw(10) << i + 1 << '|';
+		if (instance[i].first_name.length() > 10)
+		{
+			for (int j = 0; j < 9; j++)
+				std::cout << instance[i].first_name[j];
+			std::cout << ".|";
+		}
+		else
+			std::cout << std::setw(10) << instance[i].first_name << '|';
+		if (instance[i].last_name.length() > 10)
+		{
+			for (int j = 0; j < 9; j++)
+				std::cout << instance[i].last_name[j];
+				std::cout << ".|";
+		}
+		else
+			std::cout << std::setw(10) << instance[i].last_name << '|';
+		if (instance[i].nick_name.length() > 10)
+		{
+			for (int j = 0; j < 9; j++)
+				std::cout << instance[i].nick_name[j];
+				std::cout << ".|" << std::endl;
+		}
+		else
+			std::cout << std::setw(10) << instance[i].nick_name << '|' << std::endl;
+		i++;
+	}
+	std::cout << "Who would you like to call? ";
+	std::cin >> i;
+	i -= 1;
+	if (i < 0 || i >= nbr_membre)
+		std::cout << "Bad index" << std::endl;
+	else
+	{
+		std::cout << instance[i].first_name << std::endl
+			<< instance[i].last_name << std::endl
+			<< instance[i].nick_name << std::endl
+			<< instance[i].number << std::endl
+			<< instance[i].darkest_secret << std::endl;
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:01:58 by thoberth          #+#    #+#             */
-/*   Updated: 2021/11/26 15:21:25 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/11/26 17:33:26 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <limits>
+#include <iomanip>
 
 class PhonebookClass
 {
@@ -31,7 +32,7 @@ public:
 	~PhonebookClass(); // Destructeur
 
 	void	add(void); //ceci est une fonction membre
-	void	search(PhonebookClass instance[8], int nbr_membre);
+	int	search(PhonebookClass instance[8], int nbr_membre);
 };
 
 #endif
