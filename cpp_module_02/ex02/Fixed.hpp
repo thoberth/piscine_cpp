@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 16:57:53 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/06 19:52:34 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:35:58 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,23 @@ public:
 	Fixed& operator*(const Fixed& a);
 	Fixed& operator/(const Fixed& a);
 
-	bool operator>(const Fixed& a);
-	bool operator<(const Fixed& a);
-	bool operator>=(const Fixed& a);
-	bool operator<=(const Fixed& a);
-	bool operator==(const Fixed& a);
-	bool operator!=(const Fixed& a);
+	bool operator>(const Fixed& a) const;
+	bool operator<(const Fixed& a) const;
+	bool operator>=(const Fixed& a) const;
+	bool operator<=(const Fixed& a) const;
+	bool operator==(const Fixed& a) const;
+	bool operator!=(const Fixed& a) const;
 
 	Fixed& operator++(void);
 	Fixed& operator--(void);
-	Fixed& operator++(int);
-	Fixed& operator--(int);
+	Fixed operator++(int);
+	Fixed operator--(int);
+
+	static Fixed& min(Fixed& a, Fixed& b);
+	static Fixed& max(Fixed& a, Fixed& b);
+	static const Fixed& min(const Fixed& a, const Fixed& b);
+	static const Fixed& max(const Fixed& a, const Fixed& b);
+
 
 	int getRawBits(void) const;
 	void setRawBits(int const raw);

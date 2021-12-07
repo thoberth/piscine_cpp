@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/11/24 22:34:39 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/07 12:59:32 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ NAME = megaphone
 
 SRC = megaphone.cpp
 
-CC = clang++
+CC = c++
 
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -std=c++98
 
 ${NAME}:
 	${CC} -o ${NAME} ${FLAG} ${SRC}

@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhonebookClass.hpp                                 :+:      :+:    :+:   */
+/*   ContactClass.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 15:01:58 by thoberth          #+#    #+#             */
-/*   Updated: 2021/11/26 17:33:26 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/07 13:08:30 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/07 13:18:13 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOKCLASS_HPP
-# define PHONEBOOKCLASS_HPP
+#ifndef CONTACTCLASS_HPP
+# define CONTACTCLASS_HPP
 
 #include <iostream>
 #include <limits>
 #include <iomanip>
 
-class PhonebookClass
+class Contact
 {
 private:
-	/* data */
+    std::string _first_name;
+	std::string _last_name;
+	std::string _nick_name;
+	std::string	_number;
+	std::string _darkest_secret;
 public:
-	std::string first_name; //ceci est un attribut membre
-	std::string last_name;
-	std::string nick_name;
-	int	number;
-	std::string darkest_secret;
+    Contact();
+    ~Contact();
 
-	PhonebookClass(); // Constructeur
-	~PhonebookClass(); // Destructeur
-
-	void	add(void); //ceci est une fonction membre
-	int	search(PhonebookClass instance[8], int nbr_membre);
+    void	add(void);
+	int	search(Contact instance[8], int nbr_membre);
 };
 
 #endif

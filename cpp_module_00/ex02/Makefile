@@ -1,31 +1,33 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile_default                                   :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/29 13:50:20 by thoberth          #+#    #+#              #
-#    Updated: 2021/11/29 18:28:01 by thoberth         ###   ########.fr        #
+#    Created: 2021/12/07 11:34:21 by thoberth          #+#    #+#              #
+#    Updated: 2021/12/07 11:34:48 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = $(wildcard *.cpp)
+NAME = Account
 
-CC = c++
+SRCS = $(wildcard *.cpp)
+
+HDR = PhonebookClass.hpp
+
+CC = clang++
 
 FLAG = -Wall -Wextra -Werror -std=c++98
 
-NAME = name
+${NAME}:
+	${CC} -o $@ ${SRCS} ${FLAG}
 
-${NAME} :
-	${CC} -o $@ ${SRC} ${FLAG}
+all: ${NAME}
 
-all : ${NAME}
-
-fclean :
+fclean:
 	${RM} ${NAME}
 
-re : fclean all
+re: fclean all
 
-.PHONY : all fclean re
+.PHONY:	all fclean re
