@@ -61,7 +61,7 @@ int	Contact::search(Contact instance[8], int nbr_membre)
 		{
 			for (int j = 0; j < 9; j++)
 				std::cout << instance[i]._last_name[j];
-				std::cout << ".|";
+			std::cout << ".|";
 		}
 		else
 			std::cout << std::setw(10) << instance[i]._last_name << '|';
@@ -69,7 +69,7 @@ int	Contact::search(Contact instance[8], int nbr_membre)
 		{
 			for (int j = 0; j < 9; j++)
 				std::cout << instance[i]._nick_name[j];
-				std::cout << ".|" << std::endl;
+			std::cout << ".|" << std::endl;
 		}
 		else
 			std::cout << std::setw(10) << instance[i]._nick_name << '|' << std::endl;

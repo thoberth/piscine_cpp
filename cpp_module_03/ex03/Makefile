@@ -5,21 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/24 14:07:03 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/08 10:15:51 by thoberth         ###   ########.fr        #
+#    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
+#    Updated: 2021/12/08 19:03:35 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = diamondtrap
 
-SRCS = $(wildcard *.cpp)
+SRC = $(wildcard *.cpp)
 
 CC = c++
 
-FLAG = -Wall -Wextra -Werror -std=c++98
+FLAG = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
 ${NAME}:
-	${CC} -o $@ ${SRCS} ${FLAG}
+	${CC} -o ${NAME} ${FLAG} ${SRC}
 
 all: ${NAME}
 
