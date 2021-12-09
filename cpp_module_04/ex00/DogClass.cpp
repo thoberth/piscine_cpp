@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   DogClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 11:57:56 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:24:40 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 18:06:42 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/09 22:07:29 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "DogClass.hpp"
 
-#include <iomanip>
-#include <limits>
-#include <iostream>
-
-class Zombie
+Dog::Dog() : Animal()
 {
-private:
-	std::string _name;
+    this->type = "Dog";
+}
 
-public:
-	Zombie();
-	~Zombie();
-
-	void	announce(void);
-	void	setname(std::string name);
-	std::string	getname(void);
-};
-
-Zombie* zombieHorde(int N, std::string name);
+Dog::Dog(Dog const & to_copy) : Animal(to_copy)
+{}
 
 
-#endif
+Dog::~Dog()
+{
+}
+
+void    Dog::makeSound() const
+{
+    std::cout << "Wouf Waf Waf!" << std::endl;
+}
+
+Dog & Dog::operator=(Dog const & a)
+{
+    this->type = a.getType();
+    return (*this);
+}

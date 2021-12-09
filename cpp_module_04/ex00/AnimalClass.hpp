@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   AnimalClass.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 11:57:56 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:24:40 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 17:49:54 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/09 21:52:01 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ANIMALCLASS_HPP
+# define ANIMALCLASS_HPP
 
-#include <iomanip>
-#include <limits>
 #include <iostream>
 
-class Zombie
+class Animal
 {
-private:
-	std::string _name;
-
+protected:
+    std::string type;
 public:
-	Zombie();
-	~Zombie();
+    Animal();
+    Animal(Animal const & to_copy);
+    virtual ~Animal();
 
-	void	announce(void);
-	void	setname(std::string name);
-	std::string	getname(void);
+    std::string getType() const;
+
+    virtual void    makeSound() const;
+
+    Animal & operator=(Animal const & a);
 };
-
-Zombie* zombieHorde(int N, std::string name);
-
 
 #endif

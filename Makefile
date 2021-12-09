@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/08 10:35:07 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/09 17:35:59 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,13 @@ NAME = name
 
 SRC = $(wildcard *.cpp)
 
+HDR = $(wildcard *.hpp)
+
 CC = c++
 
 FLAG = -Wall -Wextra -Werror -std=c++98
 
-${NAME}:
+${NAME}: $(SRC) $(HDR)
 	${CC} -o ${NAME} ${FLAG} ${SRC}
 
 all: ${NAME}

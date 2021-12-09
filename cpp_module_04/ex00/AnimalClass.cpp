@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   AnimalClass.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 11:57:56 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:24:40 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 17:53:17 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/09 21:52:35 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "AnimalClass.hpp"
 
-#include <iomanip>
-#include <limits>
-#include <iostream>
-
-class Zombie
+Animal::Animal()
 {
-private:
-	std::string _name;
+}
 
-public:
-	Zombie();
-	~Zombie();
+Animal::Animal(Animal const & to_copy)
+{
+    *this = to_copy;
+}
 
-	void	announce(void);
-	void	setname(std::string name);
-	std::string	getname(void);
-};
+Animal::~Animal()
+{
+}
 
-Zombie* zombieHorde(int N, std::string name);
+std::string Animal::getType() const
+{
+    return (this->type);
+}
 
+void Animal::makeSound() const
+{}
 
-#endif
+Animal & Animal::operator=(Animal const & a)
+{
+    this->type = a.getType();
+    return (*this);
+}

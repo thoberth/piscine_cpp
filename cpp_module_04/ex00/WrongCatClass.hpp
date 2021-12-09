@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   WrongCatClass.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 11:57:56 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:24:40 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 18:54:49 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/09 22:04:17 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef WRONGCATCLASS_HPP
+# define WRONGCATCLASS_HPP
 
-#include <iomanip>
-#include <limits>
-#include <iostream>
+#include "WrongAnimalClass.hpp"
 
-class Zombie
+class WrongCat : public WrongAnimal
 {
 private:
-	std::string _name;
 
 public:
-	Zombie();
-	~Zombie();
+    WrongCat();
+    WrongCat(WrongCat const & to_copy);
+    ~WrongCat();
 
-	void	announce(void);
-	void	setname(std::string name);
-	std::string	getname(void);
+    void makeSound() const;
+
+    WrongCat & operator=(WrongCat const & a);
 };
-
-Zombie* zombieHorde(int N, std::string name);
-
 
 #endif

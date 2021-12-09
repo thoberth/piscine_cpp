@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   WrongCatClass.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 11:57:56 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:24:40 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 18:54:52 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/09 22:07:10 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "WrongCatClass.hpp"
 
-#include <iomanip>
-#include <limits>
-#include <iostream>
-
-class Zombie
+WrongCat::WrongCat() : WrongAnimal()
 {
-private:
-	std::string _name;
+    this->type = "Cat";
+}
 
-public:
-	Zombie();
-	~Zombie();
+WrongCat::WrongCat(WrongCat const & to_copy) : WrongAnimal(to_copy)
+{}
 
-	void	announce(void);
-	void	setname(std::string name);
-	std::string	getname(void);
-};
+WrongCat::~WrongCat()
+{
+}
 
-Zombie* zombieHorde(int N, std::string name);
+void    WrongCat::makeSound() const
+{
+    std::cout << "Wrong cat: Miaou Miaouuuuu!" << std::endl;
+}
 
-
-#endif
+WrongCat & WrongCat::operator=(WrongCat const & a)
+{
+    this->type = a.getType();
+    return (*this);
+}

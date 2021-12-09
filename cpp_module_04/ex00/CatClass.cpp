@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   CatClass.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 11:57:56 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:24:40 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 17:55:37 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/09 22:08:05 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "CatClass.hpp"
 
-#include <iomanip>
-#include <limits>
-#include <iostream>
-
-class Zombie
+Cat::Cat() : Animal()
 {
-private:
-	std::string _name;
+    this->type = "Cat";
+}
 
-public:
-	Zombie();
-	~Zombie();
+Cat::Cat(Cat const & to_copy) : Animal(to_copy) 
+{}
 
-	void	announce(void);
-	void	setname(std::string name);
-	std::string	getname(void);
-};
+Cat::~Cat()
+{
+}
 
-Zombie* zombieHorde(int N, std::string name);
+void    Cat::makeSound() const
+{
+    std::cout << "Miaou Miaouuuuu!" << std::endl;
+}
 
-
-#endif
+Cat & Cat::operator=(Cat const & a)
+{
+    this->type = a.getType();
+    return (*this);
+}

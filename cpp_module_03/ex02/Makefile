@@ -6,11 +6,13 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/08 18:01:03 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/09 17:34:51 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fragtrap
+
+HDR = $(wildcard *.hpp)
 
 SRC = $(wildcard *.cpp)
 
@@ -18,7 +20,7 @@ CC = c++
 
 FLAG = -Wall -Wextra -Werror -std=c++98
 
-${NAME}:
+${NAME}: $(SRC) $(HDR)
 	${CC} -o ${NAME} ${FLAG} ${SRC}
 
 all: ${NAME}

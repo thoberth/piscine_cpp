@@ -6,19 +6,19 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 13:50:20 by thoberth          #+#    #+#              #
-#    Updated: 2021/11/29 14:01:47 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/09 17:22:13 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = $(wildcard *.cpp)
-
+HDR = Zombie.hpp
 CC = c++
 
 FLAG = -Wall -Wextra -Werror -std=c++98
 
 NAME = zombie
 
-${NAME} :
+${NAME} : $(SRC) $(HDR)
 	${CC} -o $@ ${SRC} ${FLAG}
 
 all : ${NAME}
