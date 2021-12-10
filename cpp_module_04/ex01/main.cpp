@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 18:10:34 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/10 16:47:54 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/10 17:49:21 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main()
     std::cout << std::endl;
 
     Dog a;
+    a.getBrain()->
     std::cout << std::endl;
     Dog b(a);
     std::cout << std::endl;
