@@ -6,49 +6,35 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 18:10:34 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/10 13:51:03 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/10 16:47:54 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DogClass.hpp"
 #include "CatClass.hpp"
-#include "WrongCatClass.hpp"
 
 int main()
 {
-    const Animal* meta = new Animal();
-    std::cout << std::endl;
-    const Animal* j = new Dog();
-    std::cout << std::endl;
-    const Animal* i = new Cat();
-    std::cout << std::endl;
-
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-    
-    std::cout << std::endl;
-    delete meta;
-    std::cout << std::endl;
-    delete j;
-    std::cout << std::endl;
-    delete i;
-    std::cout << std::endl;
-    
-    const WrongAnimal* a = new WrongAnimal();
-    std::cout << std::endl;
-    const WrongAnimal* b = new WrongCat();
-    
-    std::cout << std::endl;
-
-    b->makeSound();
-    a->makeSound();
+    Animal *array[4];
+    int t_array= 4;
 
     std::cout << std::endl;
-    delete a;
+
+    for (int i = 0; i < (t_array / 2); i++)
+        array[i] = new Dog();
     std::cout << std::endl;
-    delete b;
+    for (int i = (t_array / 2); i < t_array; i++)
+        array[i] = new Cat();
+    std::cout << std::endl;
+
+    for (int i = 0; i < t_array; i++)
+        delete array[i];
+    std::cout << std::endl;
+
+    Dog a;
+    std::cout << std::endl;
+    Dog b(a);
+    std::cout << std::endl;
+
+
 }

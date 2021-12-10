@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimalClass.hpp                               :+:      :+:    :+:   */
+/*   CatClass.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 18:42:04 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/10 13:40:54 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 17:53:44 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/10 15:07:38 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMALCLASS_HPP
-# define WRONGANIMALCLASS_HPP
+#ifndef CATCLASS_HPP
+# define CATCLASS_HPP
 
-#include <iostream>
+#include "AnimalClass.hpp"
+#include "Brain.hpp"
 
-class WrongAnimal
+class Cat : public Animal
 {
-protected:
-    std::string type;
+private:
+    Brain *_brain;
 public:
-    WrongAnimal();
-    WrongAnimal(WrongAnimal const & to_copy);
-    ~WrongAnimal();
+    Cat();
+    Cat(Cat const & to_copy);
+    ~Cat();
 
-    std::string getType() const;
+    void makeSound() const;
 
-    void    makeSound() const ;
-
-    WrongAnimal & operator=(WrongAnimal const & a);
+    Cat & operator=(Cat const & a);
 };
 
 #endif

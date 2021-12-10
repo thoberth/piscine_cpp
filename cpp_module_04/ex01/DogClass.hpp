@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimalClass.hpp                               :+:      :+:    :+:   */
+/*   DogClass.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 18:42:04 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/10 13:40:54 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/09 17:56:05 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/10 17:47:18 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMALCLASS_HPP
-# define WRONGANIMALCLASS_HPP
+#ifndef DOGCLASS_HPP
+# define DOGCLASS_HPP
 
-#include <iostream>
+#include "AnimalClass.hpp"
+#include "Brain.hpp"
 
-class WrongAnimal
+class Dog : public Animal
 {
-protected:
-    std::string type;
+private:
+    Brain *_brain;
 public:
-    WrongAnimal();
-    WrongAnimal(WrongAnimal const & to_copy);
-    ~WrongAnimal();
+    Dog();
+    Dog(Dog const & to_copy);
+    ~Dog();
 
-    std::string getType() const;
+    void makeSound() const;
 
-    void    makeSound() const ;
+    Brain & getBrain();
 
-    WrongAnimal & operator=(WrongAnimal const & a);
+    Dog & operator=(Dog const & a);
 };
 
 #endif

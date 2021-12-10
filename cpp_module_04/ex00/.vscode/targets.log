@@ -1,0 +1,445 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Fri Dec 10 13:39:34 2021
+
+# Variables
+
+# environment
+VSCODE_GIT_ASKPASS_MAIN = /usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# makefile (from 'Makefile', line 15)
+SRC = $(wildcard *.cpp)
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /mnt/nfs/homes/thoberth/.Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_04/ex00
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# environment
+JOURNAL_STREAM = 9:22431769
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/thoberth/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/35933/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+MANAGERPID = 2411400
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/35933/vscode-ipc-686394c4-9f3b-4582-83ca-0710470157eb.sock
+# environment
+VSCODE_CWD = /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_04/ex00
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session31
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_35933_hUcVGf
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /mnt/nfs/homes/thoberth/bin:/mnt/nfs/homes/thoberth/bin:/mnt/nfs/homes/thoberth/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/35933/gnupg/S.gpg-agent:0:1
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+SESSION_MANAGER = local/e2r10p7.clusters.42paris.fr:@/tmp/.ICE-unix/2411692,unix/e2r10p7.clusters.42paris.fr:/tmp/.ICE-unix/2411692
+# environment
+XDG_RUNTIME_DIR = /run/user/35933
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=2dafa858-12e4-40cf-8176-9c44ec588d43&iid=2dafa858-12e4-40cf-8176-9c44ec588d43&sid=2dafa858-12e4-40cf-8176-9c44ec588d43","uploadToServer":true}
+# environment
+INVOCATION_ID = 3ddd87f23d5643a1b924119faff949bb
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/thoberth
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/35933/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2412031
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_04/ex00
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 2411656
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = Unity
+# environment
+GTK_MODULES = gail:atk-bridge
+# makefile (from 'Makefile', line 17)
+HDR = $(wildcard *.hpp)
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /mnt/nfs/homes/thoberth
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/thoberth/.config/Code/CachedData/b3318bc0524af3d74034b8bb8a64df0ccf35549a
+# environment
+LOGNAME = thoberth
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+ZSH = /mnt/nfs/homes/thoberth/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# environment
+VSCODE_GIT_IPC_HANDLE = /run/user/35933/vscode-git-8c486a4eb6.sock
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SHLVL = 2
+# makefile (from 'Makefile', line 19)
+CC = c++
+# environment
+IM_CONFIG_PHASE = 1
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = thoberth
+# makefile
+.DEFAULT_GOAL := Animal
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from 'Makefile', line 13)
+NAME = Animal
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_04/ex01
+# environment
+TERM_PROGRAM = vscode
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/35933/vscode-1fd79081-1.62.0-main.sock
+# environment
+VSCODE_GIT_ASKPASS_NODE = /usr/share/code/code
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 1.62.0
+# environment
+BREAKPAD_DUMP_LOCATION = /mnt/nfs/homes/thoberth/.config/Code/exthost Crash Reports
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# automatic
++F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from 'Makefile', line 21)
+FLAG = -Wall -Wextra -Werror -std=c++98 -pedantic
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# environment
+GIT_ASKPASS = /usr/share/code/resources/app/extensions/git/dist/askpass.sh
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+DOCKER_HOST = unix:///run/user/35933/docker.sock
+# environment
+VSCODE_PID = 1698390
+# variable set hash-table stats:
+# Load=122/1024=12%, Rehash=0, Collisions=15/158=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 54, inode 65573403): 16 files, no impossibilities.
+
+# 16 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+WrongAnimalClass.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.302809103
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+CatClass.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.294809045
+#  File has been updated.
+#  Successfully updated.
+
+all: Animal
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+
+.PHONY: all fclean re
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+WrongCatClass.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.306809131
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+DogClass.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.298809073
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+CatClass.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.294809045
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.302809103
+#  File has been updated.
+#  Successfully updated.
+
+Animal: WrongCatClass.cpp AnimalClass.cpp DogClass.cpp CatClass.cpp WrongAnimalClass.cpp main.cpp AnimalClass.hpp DogClass.hpp CatClass.hpp WrongAnimalClass.hpp WrongCatClass.hpp
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  Last modified 2021-12-10 13:39:24.286808988
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := Animal
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := WrongCatClass.cpp AnimalClass.cpp DogClass.cpp CatClass.cpp WrongAnimalClass.cpp main.cpp AnimalClass.hpp DogClass.hpp CatClass.hpp WrongAnimalClass.hpp WrongCatClass.hpp
+# automatic
+# | := 
+# automatic
+# < := WrongCatClass.cpp
+# automatic
+# ^ := WrongCatClass.cpp AnimalClass.cpp DogClass.cpp CatClass.cpp WrongAnimalClass.cpp main.cpp AnimalClass.hpp DogClass.hpp CatClass.hpp WrongAnimalClass.hpp WrongCatClass.hpp
+# automatic
+# ? := WrongCatClass.cpp AnimalClass.cpp DogClass.cpp CatClass.cpp WrongAnimalClass.cpp main.cpp AnimalClass.hpp DogClass.hpp CatClass.hpp WrongAnimalClass.hpp WrongCatClass.hpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=5/15=33%
+#  recipe to execute (from 'Makefile', line 24):
+	${CC} -o ${NAME} ${FLAG} ${SRC}
+
+# Not a target:
+DogClass.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.298809073
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.298809073
+#  File has been updated.
+#  Successfully updated.
+
+fclean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 29):
+	${RM} ${NAME}
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+AnimalClass.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.290809016
+#  File has been updated.
+#  Successfully updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+AnimalClass.hpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.290809016
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+WrongAnimalClass.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.302809103
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+WrongCatClass.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-10 13:39:24.306809131
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=19/1024=2%, Rehash=0, Collisions=0/48=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 24 / storage = 272 B / avg = 11 B
+# current buf: size = 8162 B / used = 272 B / count = 24 / avg = 11 B
+
+# strcache performance: lookups = 53 / hit rate = 54%
+# hash-table stats:
+# Load=24/8192=0%, Rehash=0, Collisions=1/53=2%
+# Finished Make data base on Fri Dec 10 13:39:34 2021
+
+ 

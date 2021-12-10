@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 18:43:37 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 22:07:52 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/10 13:43:59 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 WrongAnimal::WrongAnimal()
 {
+    std::cout << "Default Constructor WrongAnimal Called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const & to_copy)
 {
+    std::cout << "Constructor by copy WrongAnimal Called" << std::endl;
     *this = to_copy;
 }
 
 WrongAnimal::~WrongAnimal()
 {
+    std::cout << "Destructor WrongAnimal Called" << std::endl;
 }
 
 std::string WrongAnimal::getType() const
