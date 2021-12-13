@@ -6,11 +6,11 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/09 17:35:59 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/10 14:30:58 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = name
+NAME = brain
 
 SRC = $(wildcard *.cpp)
 
