@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 14:52:53 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/13 19:15:43 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/14 13:09:38 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 # include <string>
 # include "ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria
 {
 	protected:
 		std::string _type;
 	public:
-
 		AMateria();
 		AMateria( AMateria const & src );
 		AMateria( std::string const & type );

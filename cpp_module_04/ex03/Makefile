@@ -5,29 +5,32 @@
 #                                                     +:+ +:+         +:+      #
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/13 14:51:41 by thoberth         ###   ########.fr        #
+#    Created: 2021/12/14 12:44:03 by thoberth          #+#    #+#              #
+#    Updated: 2021/12/14 13:06:39 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CXX = clang++
+
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+
 NAME = interface
 
-SRC = $(wildcard *.cpp)
+SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
 
-HDR = $(wildcard *.hpp)
+OBJS = ${SRCS:.cpp=.o}
 
-CC = c++
-
-FLAG = -Wall -Wextra -Werror -std=c++98 -pedantic
-
-${NAME}: $(SRC) $(HDR)
-	${CC} -o ${NAME} ${FLAG} ${SRC}
+$(NAME): ${OBJS}
+	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 
 all: ${NAME}
 
-fclean:
+clean:
+	${RM} ${OBJS}
+
+fclean: clean
 	${RM} ${NAME}
 
 re: fclean all
 
-.PHONY:	all fclean re
+.PHONY:	all clean fclean re

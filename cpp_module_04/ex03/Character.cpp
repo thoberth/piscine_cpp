@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 14:54:05 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/13 19:11:48 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/14 13:53:33 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Character::Character() : ICharacter()
+Character::Character()
 {
+	_inventory[0] = NULL;
+	_inventory[1] = NULL;
+	_inventory[2] = NULL;
+	_inventory[3] = NULL;
 }
 
-Character::Character( const Character & src ) : ICharacter(src)
+Character::Character( const Character & src )
 {
 	this->equip(src._inventory[0]);
 	this->equip(src._inventory[1]);
@@ -28,8 +32,12 @@ Character::Character( const Character & src ) : ICharacter(src)
 	this->equip(src._inventory[3]);
 }
 
-Character::Character( std::string const name ) : ICharacter(name)
+Character::Character( std::string const name ) : _name(name)
 {
+	_inventory[0] = NULL;
+	_inventory[1] = NULL;
+	_inventory[2] = NULL;
+	_inventory[3] = NULL;
 }
 
 
@@ -39,8 +47,9 @@ Character::Character( std::string const name ) : ICharacter(name)
 
 Character::~Character()
 {
+	for (int i(0); i < 4 && this->_inventory[i]; i++)
+		delete this->_inventory[i];
 }
-
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
@@ -73,7 +82,7 @@ void Character::equip(AMateria* m)
 {
 	int i(0);
 
-	while (i < 4 && _inventory[i] == NULL)
+	while (i < 4 && _inventory[i] != NULL)
 		i++;
 	if (i != 4)
 	{
@@ -90,7 +99,7 @@ void Character::unequip(int idx)
 void Character::use(int idx, ICharacter& target)
 {
 	if (idx < 4 && idx >= 0)
-		_inventory[idx]->use(target);
+		this->_inventory[idx]->use(target);
 }
 
 /*
