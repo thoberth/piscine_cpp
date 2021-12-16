@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:36:09 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/08 13:29:49 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:47:17 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ public:
     ClapTrap();
     ClapTrap(ClapTrap const & to_copy);
     ClapTrap(std::string name);
-    ~ClapTrap();
+    virtual ~ClapTrap();
 
-    void    attack(std::string const & target);
+    virtual void    attack(std::string const & target);
     void    takeDamage(unsigned int amount);
     void    beRepaired(unsigned int amount);
 

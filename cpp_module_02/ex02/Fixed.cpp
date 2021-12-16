@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 17:02:36 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:32:41 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:23:20 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,28 @@ Fixed& Fixed::operator=(const Fixed& a)
 	return *this;
 }
 
-Fixed& Fixed::operator-(const Fixed& a)
+Fixed Fixed::operator+(const Fixed& a)
 {
-	this->_valeur -= a._valeur;
-	return *this;
+	Fixed res(this->toFloat() + a.toFloat());
+	return (res);
 }
 
-Fixed& Fixed::operator*(const Fixed& a)
+Fixed Fixed::operator-(const Fixed& a)
 {
-	this->_valeur *= a._valeur;
-	return *this;
+	Fixed res(this->toFloat() - a.toFloat());
+	return (res);
 }
 
-Fixed& Fixed::operator/(const Fixed& a)
+Fixed Fixed::operator*(const Fixed& a)
 {
-	this->_valeur /= a._valeur;
-	return *this;
+	Fixed res(a.toFloat() * this->toFloat());
+	return res;
+}
+
+Fixed Fixed::operator/(const Fixed& a)
+{
+	Fixed res(this->toFloat() / a.toFloat());
+	return res;
 }
 
 bool Fixed::operator>(const Fixed& a) const

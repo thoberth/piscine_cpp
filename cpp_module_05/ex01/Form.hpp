@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:22:24 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/14 18:22:29 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/16 17:02:29 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/16 17:38:51 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,20 @@
 
 class Form
 {
-
 	public:
-
 		Form();
-		Form( Form const & src );
 		~Form();
-
-		Form &		operator=( Form const & rhs );
+	
+		std::string getName() const;
+		bool		getSigned() const;
+		int			getToSign() const;
+		int			getToExec() const;
 
 	private:
+		std::string const _name;
+		bool 			_signed;
+		int			const _toSign;
+		int			const _toExec;
 
 };
 

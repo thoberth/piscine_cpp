@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 11:41:39 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/08 17:32:22 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:46:34 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ ScavTrap::~ScavTrap()
 void    ScavTrap::guardgate()
 {
     std::cout << _name << " have enterred in Gate keeper mode!" << std::endl;
+}
+
+void    ScavTrap::attack(std::string const & target)
+{
+    std::cout << this->_name << " attack ScavTrap" << target << std::endl;
 }
 
 ScavTrap & ScavTrap::operator=(ScavTrap const & a)

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:55:09 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/15 18:58:11 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 17:05:05 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Bureaucrat : public std::exception
 		Bureaucrat(std::string name, int grade);
 		~Bureaucrat() throw();
 
-		//void	GradeTooHighException() const throw();
+		const char*	GradeTooHighException() throw();
 		const char*	GradeTooLowException() throw();
 
 		void	incGrade();
@@ -32,7 +32,7 @@ class Bureaucrat : public std::exception
 		std::string getName() const;
 		int			getGrade() const;
 	private:
-		std::string _name;
+		std::string const _name;
 		int _grade;
 };
 

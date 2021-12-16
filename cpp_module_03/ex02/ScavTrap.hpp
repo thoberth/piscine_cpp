@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 11:38:25 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/08 13:41:11 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:49:14 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
     ~ScavTrap();
 
     void    guardgate();
+    void    attack(std::string const & target);
 
     ScavTrap & operator=(ScavTrap const & a);
 };

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 14:56:02 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/06 16:55:51 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:54:11 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int main(void) {
 	Fixed c;
 
 	b.setRawBits(8);
-	c += a;
-	c += b;
+	c = a;
+	c = b;
 
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:55:08 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/15 19:00:56 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 16:36:38 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,27 @@
 Bureaucrat::Bureaucrat() : exception(), _name("Bureaucrat"), _grade(150)
 {}
 
-Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
-{}
+Bureaucrat::Bureaucrat(std::string name, int grade) : exception(), _name(name), _grade(grade)
+{
+	try
+	{
+		if (this->_grade < 1)
+			throw *this;
+	}
+	catch(Bureaucrat)
+	{
+		std::cout << this->GradeTooHighException() << std::endl;
+	}
+	try
+	{
+		if (this->_grade > 150)
+			throw *this;
+	}
+	catch(Bureaucrat)
+	{
+		std::cout << this->GradeTooLowException() << std::endl;
+	}	
+}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -43,10 +62,16 @@ std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
+const char*	Bureaucrat::GradeTooHighException() throw()
+{
+	this->_grade = 1;
+	return ("GradeTooHigh");
+}
+
 const char*	Bureaucrat::GradeTooLowException() throw()
 {
-	this->_grade--;
-	return ("Bad Grade");
+	this->_grade = 150;
+	return ("GradeTooLow");
 }
 
 void	Bureaucrat::incGrade()
@@ -54,12 +79,11 @@ void	Bureaucrat::incGrade()
 	try {
 		this->_grade--;
 		if (this->_grade <= 0 || this->_grade > 150)
-			throw std::exception();
+			throw *this;
 	}
-	catch (std::exception e)
+	catch (Bureaucrat)
 	{
-		std::cout << "Bad Grade" << std::endl;
-		this->_grade++;
+		std::cout << this->GradeTooLowException() << std::endl;
 	}
 }
 
@@ -68,11 +92,11 @@ void	Bureaucrat::decGrade()
 	try {
 		this->_grade++;
 		if (this->_grade <= 0 || this->_grade > 150)
-			throw Bureaucrat() ;
+			throw *this;
 	}
-	catch (Bureaucrat & e)
+	catch (Bureaucrat)
 	{
-		std::cout << e.GradeTooLowException() << std::endl;
+		std::cout << this->GradeTooHighException() << std::endl;
 	}
 }
 

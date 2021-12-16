@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 11:41:39 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/08 17:33:08 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:45:53 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 ScavTrap::~ScavTrap()
 {
     std::cout << "Destructor Scavtrap called" << std::endl;
+}
+
+void    ScavTrap::attack(std::string const & target)
+{
+    std::cout << this->_name << " attack ScavTrap" << target << std::endl;
 }
 
 void    ScavTrap::guardgate()

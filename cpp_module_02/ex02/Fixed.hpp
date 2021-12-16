@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 16:57:53 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 17:32:23 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:02:34 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ public:
 	Fixed(const Fixed& to_copy);
 
 	Fixed& operator=(const Fixed& a);
-	Fixed& operator-(const Fixed& a);
-	Fixed& operator*(const Fixed& a);
-	Fixed& operator/(const Fixed& a);
+
+	Fixed operator+(const Fixed& a);
+	Fixed operator-(const Fixed& a);
+	Fixed operator*(const Fixed& a);
+	Fixed operator/(const Fixed& a);
 
 	bool operator>(const Fixed& a) const;
 	bool operator<(const Fixed& a) const;

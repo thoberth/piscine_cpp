@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 18:22:24 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/14 18:22:33 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/16 17:02:29 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/16 18:08:44 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,8 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Form::Form()
-{
-}
-
-Form::Form( const Form & src )
-{
-}
-
+Form::Form() : _name("Form"), _signed(false), _toSign(75), _toExec(125)
+{}
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -33,35 +27,45 @@ Form::~Form()
 {
 }
 
-
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Form &				Form::operator=( Form const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
-}
-
 std::ostream &			operator<<( std::ostream & o, Form const & i )
 {
-	//o << "Value = " << i.getValue();
-	return o;
+	o << i.getName() << " is ";
+	if (i.getSigned())
+		o << "signed!" << std::endl;
+	else
+		o << "not signed!" << std::endl;
 }
-
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
-
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+std::string Form::getName() const
+{
+	return (this->_name);
+}
+
+bool		Form::getSigned() const
+{
+	return (this->_signed);
+}
+
+int			Form::getToSign() const
+{
+	return (this->_toSign);
+}
+
+int			Form::getToExec() const
+{
+	return (this->_toExec);
+}
 
 /* ************************************************************************** */

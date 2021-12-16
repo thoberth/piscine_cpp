@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fixed.cpp                                          :+:      :+:    :+:   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 16:10:37 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/06 16:52:25 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:55:53 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,19 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits(void) const
 {
+	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_valeur);
 }
 
 void Fixed::setRawBits(int const raw)
 {
+	std::cout << "setRawBits member function called" << std::endl;
 	this->_valeur = raw;
 }
 
-Fixed& Fixed::operator+=(Fixed const& a)
+Fixed& Fixed::operator=(Fixed const& a)
 {
-	std::cout << "Assignation operator += called" << std::endl;
-	this->_valeur += a._valeur;
+	std::cout << "Assignation operator = called" << std::endl;
+	this->_valeur = a._valeur;
 	return *this;
 }
