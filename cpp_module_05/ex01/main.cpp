@@ -5,38 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 14:55:43 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/14 18:20:48 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/14 16:55:57 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/14 17:29:02 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MateriaSource.hpp"
-#include "Character.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
+#include "Bureaucrat.hpp"
 
 int main()
 {
-	IMateriaSource *src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	
-	ICharacter *me = new Character("me");
-	
-	AMateria *tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	
-	ICharacter *bob = new Character("bob");
-	
-	me->use(0, *bob);
-	me->use(1, *bob);
-	
-	delete bob;
-	delete me;
-	delete src;
-	
-	return 0;
+	Bureaucrat tom;
+	Bureaucrat rob("robert", 1);
+
+	std::cout << tom << std::endl;
+	std::cout << rob << std::endl;
+
+	tom.decGrade();
+	rob.incGrade();
+
+	std::cout << tom << std::endl;
+	std::cout << rob << std::endl;
 }

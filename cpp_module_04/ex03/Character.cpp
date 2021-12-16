@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 14:54:05 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/14 13:53:33 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/14 18:20:15 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,12 @@ void Character::equip(AMateria* m)
 {
 	int i(0);
 
-	while (i < 4 && _inventory[i] != NULL)
+	while (i < 4 && this->_inventory[i] != NULL)
+	{
+		if (this->_inventory[i] == m)
+			return ;
 		i++;
+	}
 	if (i != 4)
 	{
 		_inventory[i] = m;
