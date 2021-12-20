@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 17:02:29 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/18 18:26:55 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/20 17:49:15 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <stdlib.h>
 # include "Bureaucrat.hpp"
 
 class Bureaucrat;

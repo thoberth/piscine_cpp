@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:40:18 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/08 17:26:57 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/20 13:30:37 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(ClapTrap const & to_copy)
 ClapTrap::ClapTrap(std::string name) : _name(name), _Hit_points(10),
     _Energy_points(10), _Attack_damage(0)
 {
-    std::cout << _name << " is created & Constructor called" << std::endl;
+    std::cout << _name << " is created & Constructor claptrap called" << std::endl;
 }
 
 ClapTrap::~ClapTrap()

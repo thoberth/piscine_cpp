@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/18 14:43:40 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/20 17:49:41 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/18 14:44:02 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/18 19:03:42 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-RobotomyRequestForm::RobotomyRequestForm() : Form("RobotomyRequest", 72, 45),
+PresidentialPardonForm::PresidentialPardonForm() : Form("PresidentialPardon", 25, 5),
 	_target("default target")
 {}
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("RobotomyRequest", 72, 45),
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("PresidentialPardon", 25, 5),
 	_target(target)
 {}
 
-RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm & src ) : Form(src),
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src ) : Form(src),
 	_target(src.getTarget())
 {}
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-RobotomyRequestForm::~RobotomyRequestForm()
-{}
+PresidentialPardonForm::~PresidentialPardonForm()
+{
+}
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm const & rhs )
+PresidentialPardonForm &				PresidentialPardonForm::operator=( PresidentialPardonForm const & rhs )
 {
 	if ( this != &rhs )
 	{
@@ -53,36 +53,16 @@ RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm con
 ** --------------------------------- METHODS ----------------------------------
 */
 
-const char* RobotomyRequestForm::FailureActionException::what() const throw()
+void		PresidentialPardonForm::Action() const
 {
-	return ("The Robotomized has been failed");
-}
-
-void	RobotomyRequestForm::Action() const
-{
-	srand(time(NULL));
-	int	random(rand() % 2);
-	try
-	{
-		if (random == 1)
-		{
-			throw RobotomyRequestForm::FailureActionException();
-		}
-		else
-		{
-			std::cout << "* Drilling Noises *\n" <<  this->getTarget()
-				<< " has been Robotomized succesfully" << std::endl;
-		}
-	}
-	catch(RobotomyRequestForm::FailureActionException & e) {
-		std::cout << e.what() << std::endl; }
+	std::cout << this->getTarget() << " has been pardoned by Zafod Beeblebox" << std::endl;
 }
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
-std::string		RobotomyRequestForm::getTarget() const
+std::string		PresidentialPardonForm::getTarget() const
 {
 	return (this->_target);
 }

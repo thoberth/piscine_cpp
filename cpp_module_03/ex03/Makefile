@@ -6,15 +6,15 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/09 17:35:20 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/20 13:15:37 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = diamondtrap
 
-HDR = $(wildcard *.hpp)
+HDR = ScavTrap.hpp ClapTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
-SRC = $(wildcard *.cpp)
+SRC = main.cpp ScavTrap.cpp ClapTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 CC = c++
 

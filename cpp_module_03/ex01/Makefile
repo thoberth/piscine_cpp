@@ -6,15 +6,15 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 12:02:08 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/09 17:34:29 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/20 13:12:21 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = scavtrap
 
-HDR = $(wildcard *.hpp)
+HDR = ClapTrap.hpp ScavTrap.hpp
 
-SRC = $(wildcard *.cpp)
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 CC = c++
 

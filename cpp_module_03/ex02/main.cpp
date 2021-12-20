@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:59:16 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/08 18:12:15 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/20 13:21:34 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int main ()
     Thomas.attack(Victor.getName());
     Victor.takeDamage(Thomas.getHit_points());
     Thomas.beRepaired(10);
-    Victor.guardgate();
+    Victor.guardGate();
     Edouard.highFivesGuys();
 }
