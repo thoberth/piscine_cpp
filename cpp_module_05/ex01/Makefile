@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 12:44:03 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/14 17:30:19 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/17 15:20:18 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,13 +23,15 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME = Bureaucrat
+NAME = Form
 
-SRCS = $(wildcard *.cpp)
+SRCS = Bureaucrat.cpp main.cpp Form.cpp
+
+HDR = Bureaucrat.hpp Form.hpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-$(NAME): ${OBJS}
+$(NAME): ${OBJS} ${HDR} ${SRCS}
 	@printf "\n$(BLUE)"
 	@printf "$(BLUE)Compiling files...\n"
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}

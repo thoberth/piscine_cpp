@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 17:02:29 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/17 17:02:39 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/18 18:05:43 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Form::Form() : _name("Form"), _signed(false), _toSign(75), _toExec(125)
+Form::Form() : _toSign(0), _toExec(0)
+{}
+
+Form::Form(std::string name, int to_sign, int to_exec) : _name(name),
+	_signed(false), _toSign(to_sign), _toExec(to_exec)
 {}
 
 Form::Form(Form const & src) : _name(src.getName()), _signed(src.getSigned()),
@@ -57,6 +61,11 @@ std::ostream &			operator<<( std::ostream & o, Form const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
+const char* Form::FormNotSignedException::what() const throw()
+{
+	return ("Form is not signed so this cannot be exec");
+}
+
 const char* Form::GradeTooLowException::what() const throw()
 {
 	return ("Grade too Low to Sign");
@@ -80,6 +89,23 @@ void		Form::beSigned(Bureaucrat const & b)
 	{
 		std::cout << e.what() << std::endl;
 	}
+}
+
+void		Form::execute(Bureaucrat const & executor) const
+{
+	try
+	{
+		if (this->getSigned() == false)
+			throw Form::FormNotSignedException();
+		if (executor.getGrade() > this->getToExec())
+			throw Form::GradeTooLowException();
+		else
+			this->Action();
+	}
+	catch (Form::FormNotSignedException & e) {
+		std::cout << e.what() << std::endl; }
+	catch (Form::GradeTooLowException & e) {
+		std::cout << e.what() << std::endl; }
 }
 
 /*

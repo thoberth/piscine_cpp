@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:55:08 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/16 16:36:38 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/17 17:04:24 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,41 +16,63 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Bureaucrat::Bureaucrat() : exception(), _name("Bureaucrat"), _grade(150)
+Bureaucrat::Bureaucrat() : _name("Bureaucrat"), _grade(150)
 {}
 
-Bureaucrat::Bureaucrat(std::string name, int grade) : exception(), _name(name), _grade(grade)
+Bureaucrat::Bureaucrat( Bureaucrat const & src ) : _name(src.getName()), _grade(src.getGrade())
 {
 	try
 	{
 		if (this->_grade < 1)
-			throw *this;
+			throw Bureaucrat::GradeTooHighException();
+		if (this->_grade > 150)
+			throw Bureaucrat::GradeTooLowException();
 	}
-	catch(Bureaucrat)
+	catch(Bureaucrat::GradeTooHighException & e)
 	{
-		std::cout << this->GradeTooHighException() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
+	catch(Bureaucrat::GradeTooLowException & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
+
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
+{
 	try
 	{
+		if (this->_grade < 1)
+			throw Bureaucrat::GradeTooHighException();
 		if (this->_grade > 150)
-			throw *this;
+			throw Bureaucrat::GradeTooLowException();
 	}
-	catch(Bureaucrat)
+	catch(Bureaucrat::GradeTooHighException & e)
 	{
-		std::cout << this->GradeTooLowException() << std::endl;
-	}	
+		std::cout << e.what() << std::endl;
+	}
+	catch(Bureaucrat::GradeTooLowException & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 }
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Bureaucrat::~Bureaucrat() throw()
+Bureaucrat::~Bureaucrat()
 {}
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
 */
+
+Bureaucrat & Bureaucrat::operator=(Bureaucrat const & src)
+{
+	this->_grade = src.getGrade();
+	return *this;
+}
 
 std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 {
@@ -62,16 +84,32 @@ std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 ** --------------------------------- METHODS ----------------------------------
 */
 
-const char*	Bureaucrat::GradeTooHighException() throw()
+const char*	Bureaucrat::GradeTooHighException::what() const throw()
 {
-	this->_grade = 1;
 	return ("GradeTooHigh");
 }
 
-const char*	Bureaucrat::GradeTooLowException() throw()
+const char*	Bureaucrat::GradeTooLowException::what() const throw()
 {
-	this->_grade = 150;
 	return ("GradeTooLow");
+}
+
+void	Bureaucrat::signForm(Form & f)
+{
+	if (f.getSigned() == true)
+		return ;
+	try{
+		f.beSigned(*this);
+		if (f.getSigned() == true)
+			std::cout << this->getName() << " signs " << f.getName() << std::endl;
+		else
+			throw Form::GradeTooLowException();
+	}
+	catch (Form::GradeTooLowException & e)
+	{
+		std::cout << this->getName()<< " cannot signs " << f.getName()
+		<< " because " << e.what() << std::endl;
+	}
 }
 
 void	Bureaucrat::incGrade()
@@ -79,11 +117,11 @@ void	Bureaucrat::incGrade()
 	try {
 		this->_grade--;
 		if (this->_grade <= 0 || this->_grade > 150)
-			throw *this;
+			throw Bureaucrat::GradeTooLowException();
 	}
-	catch (Bureaucrat)
+	catch (Bureaucrat::GradeTooLowException & e)
 	{
-		std::cout << this->GradeTooLowException() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 }
 
@@ -92,11 +130,11 @@ void	Bureaucrat::decGrade()
 	try {
 		this->_grade++;
 		if (this->_grade <= 0 || this->_grade > 150)
-			throw *this;
+			throw Bureaucrat::GradeTooHighException();
 	}
-	catch (Bureaucrat)
+	catch (Bureaucrat::GradeTooHighException & e)
 	{
-		std::cout << this->GradeTooHighException() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 }
 

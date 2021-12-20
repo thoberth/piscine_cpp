@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 12:44:03 by thoberth          #+#    #+#              #
-#    Updated: 2021/12/17 15:20:58 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/18 19:08:17 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,11 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 NAME = executable
 
-SRCS = .cpp
+SRCS = ShrubberyCreationForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp Form.cpp \
+		RobotomyRequestForm.cpp main.cpp
 
-HDR = .hpp
+HDR = ShrubberyCreationForm.hpp Bureaucrat.hpp PresidentialPardonForm.hpp Form.hpp \
+		RobotomyRequestForm.hpp
 
 OBJS = ${SRCS:.cpp=.o}
 
@@ -50,7 +52,7 @@ clean:
 fclean: clean
 	@printf "\n"
 	@printf "$(RED)Delete executable file\n"
-	${RM} ${NAME}
+	${RM} ${NAME} *_shrubbery
 	@printf "$(RESET)\n"
 
 re: fclean all

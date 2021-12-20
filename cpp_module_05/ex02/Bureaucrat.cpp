@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:55:08 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/17 15:45:12 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/18 18:23:35 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,40 @@ const char*	Bureaucrat::GradeTooHighException::what() const throw()
 const char*	Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("GradeTooLow");
+}
+
+void	Bureaucrat::executeForm(Form const & form)
+{
+	try{
+		if (this->getGrade() > form.getToExec())
+			throw Bureaucrat::GradeTooLowException();
+		else
+		{
+			std::cout << this->getName() << " executes " << form.getName()
+				<< std::endl;
+			form.execute(*this);
+		}
+	}
+	catch (Bureaucrat::GradeTooLowException & e) {
+		std::cout << e.what() << std::endl; }
+}
+
+void	Bureaucrat::signForm(Form & f)
+{
+	if (f.getSigned() == true)
+		return ;
+	try{
+		f.beSigned(*this);
+		if (f.getSigned() == true)
+			std::cout << this->getName() << " signs " << f.getName() << std::endl;
+		else
+			throw Form::GradeTooLowException();
+	}
+	catch (Form::GradeTooLowException & e)
+	{
+		std::cout << this->getName()<< " cannot signs " << f.getName()
+		<< " because " << e.what() << std::endl;
+	}
 }
 
 void	Bureaucrat::incGrade()

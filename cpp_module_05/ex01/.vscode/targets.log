@@ -1,284 +1,186 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'Form.o', needed by 'Bureaucrat'.  Stop.
- 
-# GNU Make 4.2.1
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
 
-# Make data base, printed on Thu Dec 16 17:03:00 2021
+# This program built for i386-apple-darwin11.3.0
+
+# Make data base, printed on Sat Dec 18 13:23:06 2021
 
 # Variables
 
-# environment
-VSCODE_GIT_ASKPASS_MAIN = /usr/share/code/resources/app/extensions/git/dist/askpass-main.js
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
 # environment
-DESKTOP_SESSION = ubuntu
-# default
-.SHELLFLAGS := -c
-# environment
-XDG_SESSION_CLASS = user
-# environment
-XDG_SESSION_TYPE = x11
+LC_CTYPE = 
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# environment
-XAUTHORITY = /mnt/nfs/homes/thoberth/.Xauthority
-# environment
-GDMSESSION = ubuntu
-# environment
-XMODIFIERS = @im=ibus
+# automatic
+@F = $(notdir $@)
 # makefile
-CURDIR := /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_05/ex01
+CURDIR := /Users/berthetthomas/Desktop/42/piscine_cpp/cpp_module_05/ex01
 # makefile
 SHELL = /bin/sh
 # environment
-GDM_LANG = en
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"9fdd4736c50ab5d00bf618b3d10bedcc.fr","_translationsConfigFile":"/Users/berthetthomas/Library/Application Support/Code/clp/9fdd4736c50ab5d00bf618b3d10bedcc.fr/tcf.json","_cacheRoot":"/Users/berthetthomas/Library/Application Support/Code/clp/9fdd4736c50ab5d00bf618b3d10bedcc.fr","_resolvedLanguagePackCoreLocation":"/Users/berthetthomas/Library/Application Support/Code/clp/9fdd4736c50ab5d00bf618b3d10bedcc.fr/899d46d82c4c95423fb7e10e68eba52050e30ba3","_corruptedFile":"/Users/berthetthomas/Library/Application Support/Code/clp/9fdd4736c50ab5d00bf618b3d10bedcc.fr/corrupted.info","_languagePackSupport":true}
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# environment
-_ = /usr/bin/code
-# makefile (from 'Makefile', line 13)
+_ = /usr/bin/make
+# makefile (from `Makefile', line 13)
 BLUE = \033[0;34m
-# environment
-JOURNAL_STREAM = 9:24778309
-# environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
-# makefile (from 'Makefile', line 1)
+# makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# automatic
-@F = $(notdir $@)
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
-# 'override' directive
-GNUMAKEFLAGS := 
-# makefile (from 'Makefile', line 24)
+# makefile (from `Makefile', line 24)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 # environment
-MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
-# environment
-XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/thoberth/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/35933/bus
-# environment
 VSCODE_VERBOSE_LOGGING = true
-# makefile (from 'Makefile', line 30)
-OBJS = ${SRCS:.cpp=.o}
 # environment
-MANAGERPID = 2942445
+__CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/35933/vscode-ipc-d327c936-c304-4c92-97a1-8e7b1a3c44d2.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/cq/w0rq9hv115v2vzq02352n6k40000gn/T/vscode-ipc-1fead949-6463-4de7-86eb-c4cd4464f3a7.sock
 # environment
-VSCODE_CWD = /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_05
+VSCODE_CWD = /
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session42
-# environment
-KRB5CCNAME = FILE:/tmp/krb5cc_35933_NKMahE
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
-# environment
-PATH = /mnt/nfs/homes/thoberth/bin:/mnt/nfs/homes/thoberth/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# environment
-GPG_AGENT_INFO = /run/user/35933/gnupg/S.gpg-agent:0:1
+PATH = /Users/berthetthomas/miniconda/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e2r10p7.clusters.42paris.fr:@/tmp/.ICE-unix/2942730,unix/e2r10p7.clusters.42paris.fr:/tmp/.ICE-unix/2942730
-# environment
-XDG_RUNTIME_DIR = /run/user/35933
-# environment
-XDG_MENU_PREFIX = gnome-
+LaunchInstanceID = 1DD091A5-68B8-47C3-A98C-7912571C4CE6
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=2dafa858-12e4-40cf-8176-9c44ec588d43&iid=2dafa858-12e4-40cf-8176-9c44ec588d43&sid=2dafa858-12e4-40cf-8176-9c44ec588d43","uploadToServer":true}
-# environment
-INVOCATION_ID = 3bbdc8e1b1474a21900e060c833be552
+ELECTRON_RUN_AS_NODE = 1
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/thoberth
-# environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
-# environment
-XDG_SESSION_DESKTOP = ubuntu
-# environment
-SSH_AUTH_SOCK = /run/user/35933/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2943062
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.lxEIPXRMkC/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = :0
+DISPLAY = /private/tmp/com.apple.launchd.idttCe4mPz/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
+# makefile (from `Makefile', line 32)
+OBJS = ${SRCS:.cpp=.o}
 # environment
-PWD = /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_05/ex01
-# makefile (from 'Makefile', line 15)
+PWD = /Users/berthetthomas/Desktop/42/piscine_cpp/cpp_module_05/ex01
+# makefile (from `Makefile', line 15)
 LIGHTBLUE = \033[1;34m
-# default
-.LOADED := 
 # environment
-SSH_AGENT_PID = 2942694
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 14)
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from `Makefile', line 14)
 GREEN = \033[0;32m
-# environment
-GTK_MODULES = gail:atk-bridge
+# makefile (from `Makefile', line 30)
+HDR = Bureaucrat.hpp Form.hpp
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
-HOME = /mnt/nfs/homes/thoberth
+HOME = /Users/berthetthomas
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CLI = 1
+VSCODE_CODE_CACHE_PATH = /Users/berthetthomas/Library/Application Support/Code/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
 # environment
-VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/thoberth/.config/Code/CachedData/b3318bc0524af3d74034b8bb8a64df0ccf35549a
-# environment
-LOGNAME = thoberth
+LOGNAME = berthetthomas
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-ZSH = /mnt/nfs/homes/thoberth/.oh-my-zsh
+ZSH = /Users/berthetthomas/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-MAKELEVEL := 0
-# environment
-VSCODE_GIT_IPC_HANDLE = /run/user/35933/vscode-git-b1c9e5826c.sock
-# environment
-COLORTERM = truecolor
+XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
-# environment
-QT_IM_MODULE = ibus
-# makefile (from 'Makefile', line 28)
-SRCS = $(wildcard *.cpp)
+# makefile (from `Makefile', line 28)
+SRCS = Bureaucrat.cpp main.cpp Form.cpp
 # environment
 SHLVL = 1
-# environment
-IM_CONFIG_PHASE = 1
 # default
-MAKE_VERSION := 4.2.1
+MAKE_VERSION := 3.81
 # environment
-USER = thoberth
+USER = berthetthomas
 # makefile
-.DEFAULT_GOAL := Bureaucrat
-# environment
-XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 26)
-NAME = Bureaucrat
-# makefile (from 'Makefile', line 18)
+.DEFAULT_GOAL := Form
+# makefile (from `Makefile', line 26)
+NAME = Form
+# makefile (from `Makefile', line 18)
 ORANGE = \033[0;33m
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := make
-# environment
-OLDPWD = /mnt/nfs/homes/thoberth/Desktop/piscine_cpp/cpp_module_03
-# environment
-TERM_PROGRAM = vscode
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
+# environment
+TMPDIR = /var/folders/cq/w0rq9hv115v2vzq02352n6k40000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-LANGUAGE = en
-# environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
-# environment
-VSCODE_IPC_HOOK = /run/user/35933/vscode-1fd79081-1.62.0-main.sock
-# environment
-VSCODE_GIT_ASKPASS_NODE = /usr/share/code/code
-# makefile (from 'Makefile', line 16)
+VSCODE_IPC_HOOK = /Users/berthetthomas/Library/Application Support/Code/1.63.2-main.sock
+# makefile (from `Makefile', line 16)
 RED = \033[0;31m
 # makefile
-MAKEFLAGS = pqrR
+MAKEFLAGS = Rrqp
 # environment
-MFLAGS = -pqrR
+MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 1.62.0
-# environment
-BREAKPAD_DUMP_LOCATION = /mnt/nfs/homes/thoberth/.config/Code/exthost Crash Reports
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.17409806.17409813
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# makefile (from 'Makefile', line 17)
+# makefile (from `Makefile', line 17)
 YELLOW = \033[1;33m
-# environment
-GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
-NO_AT_BRIDGE = 1
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x1
 # environment
-QT_ACCESSIBILITY = 1
-# environment
-DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
-# environment
-GIT_ASKPASS = /usr/share/code/resources/app/extensions/git/dist/askpass.sh
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
-# environment
-ELECTRON_RUN_AS_NODE = 1
-# makefile (from 'Makefile', line 22)
+# makefile (from `Makefile', line 22)
 CXX = c++
 # environment
 PAGER = less
 # environment
 LC_ALL = C
-# makefile (from 'Makefile', line 20)
+# makefile (from `Makefile', line 20)
 RESET = \033[0m
 # environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+SECURITYSESSIONID = 186a5
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# environment
-CHROME_DESKTOP = code-url-handler.desktop
 # default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# environment
-GJS_DEBUG_OUTPUT = stderr
-# makefile (from 'Makefile', line 19)
+.INCLUDE_DIRS = /usr/local/include
+# makefile (from `Makefile', line 19)
 MAGENTA = \033[0;35m
-# default
-.RECIPEPREFIX := 
+# environment
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-DOCKER_HOST = unix:///run/user/35933/docker.sock
-# environment
-VSCODE_PID = 2943062
+VSCODE_PID = 455
 # variable set hash-table stats:
- 
-# Load=132/1024=13%, Rehash=0, Collisions=18/161=11%
+# Load=84/1024=8%, Rehash=0, Collisions=8/114=7%
 
 # Pattern-specific Variable Values
 
@@ -286,7 +188,7 @@ VSCODE_PID = 2943062
 
 # Directories
 
-# . (device 58, inode 240814444): 9 files, no impossibilities.
+# . (device 16777221, inode 17184201): 9 files, no impossibilities.
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -296,11 +198,25 @@ VSCODE_PID = 2943062
 
 # Files
 
-all: Bureaucrat
+# Not a target:
+Bureaucrat.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: Form
 #  Phony target (prerequisite of .PHONY).
-#  Command line target.
+#  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+Form.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 .PHONY: all clean fclean re
@@ -309,44 +225,79 @@ all: Bureaucrat
 #  File has not been updated.
 
 # Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-16 16:39:09.613501564
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-Bureaucrat.o:
+Bureaucrat.hpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-Bureaucrat: Form.o Bureaucrat.o main.o
+# Not a target:
+Form.hpp:
 #  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-17 15:20:18
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+main.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Bureaucrat.o:
+#  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 33):
-	@printf "\n$(BLUE)"
-	@printf "$(BLUE)Compiling files...\n"
-	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
-	@printf "$(GREEN)[$(NAME) done][✔]$(RESET)\n"
-	@printf "\n"
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 49):
+#  commands to execute (from `Makefile', line 51):
 	@printf "\n"
 	@printf "$(RED)Delete executable file\n"
 	${RM} ${NAME}
 	@printf "$(RESET)\n"
+	
+
+Form: Bureaucrat.o main.o Form.o Bureaucrat.hpp Form.hpp Bureaucrat.cpp main.cpp Form.cpp
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 35):
+	@printf "\n$(BLUE)"
+	@printf "$(BLUE)Compiling files...\n"
+	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
+	@printf "$(GREEN)[$(NAME) done][✔]$(RESET)\n"
+	@printf "\n"
+	
 
 # Not a target:
+ 
+make: *** No rule to make target `Bureaucrat.o', needed by `Form'.  Stop.
+ 
 Form.o:
-#  Implicit rule search has been done.
-#  File does not exist.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
@@ -366,11 +317,12 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 42):
+#  commands to execute (from `Makefile', line 44):
 	@printf "\n"
 	@printf "$(RED)Erase files '.o'\n"
 	${RM} ${OBJS}
 	@printf "$(RESET)\n"
+	
 
 # Not a target:
 main.o:
@@ -379,19 +331,18 @@ main.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/34=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/46=0%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 195 B / avg = 8 B
-# current buf: size = 8162 B / used = 195 B / count = 22 / avg = 8 B
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# strcache performance: lookups = 41 / hit rate = 46%
-# hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=1/41=2%
-# Finished Make data base on Thu Dec 16 17:03:00 2021
+# Finished Make data base on Sat Dec 18 13:23:06 2021
 
  
