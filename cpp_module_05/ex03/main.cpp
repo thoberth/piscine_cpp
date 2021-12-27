@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:55:57 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/20 17:47:03 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/21 12:09:21 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ int main()
 	ptr = intern.makeForm("erreur", "target");
 	ptr = intern.makeForm("shrubbery creation", "home");
 	ptr->Action();
+	delete ptr;
 }

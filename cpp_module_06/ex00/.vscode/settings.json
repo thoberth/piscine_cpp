@@ -1,0 +1,11 @@
+{
+	"files.associations": {
+		"limits": "cpp",
+		"*.tcc": "cpp",
+		"string_view": "cpp",
+		"random": "cpp",
+		"istream": "cpp",
+		"numeric": "cpp",
+		"iomanip": "cpp"
+	}
+}
