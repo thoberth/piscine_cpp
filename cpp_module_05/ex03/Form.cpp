@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 17:02:29 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/20 17:40:57 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 15:29:27 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void		Form::beSigned(Bureaucrat const & b)
 	}
 	catch (Form::GradeTooLowException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 
@@ -106,9 +106,9 @@ void		Form::execute(Bureaucrat const & executor) const
 		}
 	}
 	catch (Form::FormNotSignedException & e) {
-		std::cout << e.what() << std::endl; }
+		std::cerr << e.what() << std::endl; }
 	catch (Form::GradeTooLowException & e) {
-		std::cout << e.what() << std::endl; }
+		std::cerr << e.what() << std::endl; }
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 17:53:44 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/09 21:56:30 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 14:34:38 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ private:
 public:
     Cat();
     Cat(Cat const & to_copy);
-    ~Cat();
+    virtual ~Cat();
 
-    void makeSound() const;
+    virtual void makeSound() const;
 
     Cat & operator=(Cat const & a);
 };

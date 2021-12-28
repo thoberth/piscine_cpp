@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DogClass.hpp                                       :+:      :+:    :+:   */
+/*   ClassA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 17:56:05 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/28 14:35:30 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/28 17:15:45 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/28 18:33:00 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOGCLASS_HPP
-# define DOGCLASS_HPP
+#ifndef CLASSA_HPP
+# define CLASSA_HPP
 
-#include "AnimalClass.hpp"
-#include "Brain.hpp"
-
-class Dog : public Animal
+# include <iostream>
+# include <string>
+# include "Base.hpp"
+ 
+class ClassA : public Base
 {
-private:
-    Brain *_brain;
-public:
-    Dog();
-    Dog(Dog const & to_copy);
-    virtual ~Dog();
+	public:
+		ClassA();
+		ClassA( ClassA const & src );
+		~ClassA();
 
-    virtual void makeSound() const;
-
-    Brain & getBrain();
-
-    Dog & operator=(Dog const & a);
+		ClassA &		operator=( ClassA const & rhs );
 };
 
-#endif
+#endif /* ********************************************************** CLASSA_H */

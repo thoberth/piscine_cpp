@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DogClass.hpp                                       :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 17:56:05 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/28 14:35:30 by thoberth         ###   ########.fr       */
+/*   Created: 2021/12/28 17:16:27 by thoberth          #+#    #+#             */
+/*   Updated: 2021/12/28 17:22:19 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOGCLASS_HPP
-# define DOGCLASS_HPP
+#ifndef BASE_HPP
+# define BASE_HPP
 
-#include "AnimalClass.hpp"
-#include "Brain.hpp"
+# include <iostream>
+# include <string>
+# include <stdlib.h>
 
-class Dog : public Animal
+class Base
 {
-private:
-    Brain *_brain;
-public:
-    Dog();
-    Dog(Dog const & to_copy);
-    virtual ~Dog();
-
-    virtual void makeSound() const;
-
-    Brain & getBrain();
-
-    Dog & operator=(Dog const & a);
+	public:
+		virtual ~Base();
 };
 
-#endif
+#endif /* ************************************************************ BASE_H */

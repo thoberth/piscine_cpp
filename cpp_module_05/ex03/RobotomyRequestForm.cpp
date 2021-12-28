@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 14:43:40 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/20 17:43:22 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 15:30:01 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	RobotomyRequestForm::Action() const
 		}
 	}
 	catch(RobotomyRequestForm::FailureActionException & e) {
-		std::cout << e.what() << std::endl; }
+		std::cerr << e.what() << std::endl; }
 }
 
 /*

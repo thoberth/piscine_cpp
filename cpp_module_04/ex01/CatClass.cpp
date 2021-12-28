@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 17:55:37 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/13 13:10:49 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 14:40:03 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ Cat::~Cat()
 void    Cat::makeSound() const
 {
     std::cout << "Miaou Miaouuuuu!" << std::endl;
+}
+
+Brain & Cat::getBrain()
+{
+    return(*this->_brain);
 }
 
 Cat & Cat::operator=(Cat const & a)

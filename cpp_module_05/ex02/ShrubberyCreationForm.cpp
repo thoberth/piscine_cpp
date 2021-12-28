@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 14:43:20 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/18 19:03:37 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 15:29:05 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void		ShrubberyCreationForm::Action() const
 			throw ShrubberyCreationForm::ErrorCreatingFileException();
 	}
 	catch(ShrubberyCreationForm::ErrorCreatingFileException & e) {
-		std::cout << e.what() <<std::endl; return; }
+		std::cerr << e.what() <<std::endl; return; }
 	flux << "        .,\n"
 	<< "          'b      *\n"
 	<< "           '$    #.\n"

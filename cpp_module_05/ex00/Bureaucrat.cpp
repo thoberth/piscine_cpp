@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:55:08 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/17 15:45:12 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 15:27:57 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ Bureaucrat::Bureaucrat( Bureaucrat const & src ) : _name(src.getName()), _grade(
 	}
 	catch(Bureaucrat::GradeTooHighException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	catch(Bureaucrat::GradeTooLowException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 
@@ -49,11 +49,11 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 	}
 	catch(Bureaucrat::GradeTooHighException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	catch(Bureaucrat::GradeTooLowException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 
@@ -103,7 +103,7 @@ void	Bureaucrat::incGrade()
 	}
 	catch (Bureaucrat::GradeTooLowException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 
@@ -116,7 +116,7 @@ void	Bureaucrat::decGrade()
 	}
 	catch (Bureaucrat::GradeTooHighException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 

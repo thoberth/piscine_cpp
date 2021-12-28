@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 17:02:29 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/17 17:02:39 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 15:28:23 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void		Form::beSigned(Bureaucrat const & b)
 	}
 	catch (Form::GradeTooLowException & e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 }
 

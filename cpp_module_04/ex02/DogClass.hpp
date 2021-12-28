@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 17:56:05 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/10 17:47:18 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 14:43:17 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ private:
 public:
     Dog();
     Dog(Dog const & to_copy);
-    ~Dog();
+    virtual ~Dog();
 
-    void makeSound() const;
+    virtual void makeSound() const;
 
     Brain & getBrain();
 

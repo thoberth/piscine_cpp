@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 17:53:17 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/10 13:44:57 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 14:22:00 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ std::string Animal::getType() const
 }
 
 void Animal::makeSound() const
-{}
+{
+    std::cout << "an Animal Sound" << std::endl;
+}
 
 Animal & Animal::operator=(Animal const & a)
 {

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 14:22:04 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/20 17:29:39 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 15:29:31 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ Form * Intern::makeForm(std::string form, std::string target)
 		}
 	}
 	catch (Intern::FormIsUnknowException & e){
-		std::cout << e.what() << std::endl; }
+		std::cerr << e.what() << std::endl; }
 	return NULL;
 }
 /*

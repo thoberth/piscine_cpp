@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 18:10:34 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/10 13:51:03 by thoberth         ###   ########.fr       */
+/*   Updated: 2021/12/28 14:30:54 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@ int main()
     const WrongAnimal* a = new WrongAnimal();
     std::cout << std::endl;
     const WrongAnimal* b = new WrongCat();
+    WrongCat c;
     
     std::cout << std::endl;
 
     b->makeSound();
     a->makeSound();
+    c.makeSound();
 
     std::cout << std::endl;
     delete a;
