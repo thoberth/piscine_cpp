@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/28 17:16:27 by thoberth          #+#    #+#             */
-/*   Updated: 2022/01/03 18:51:45 by thoberth         ###   ########.fr       */
+/*   Created: 2022/01/03 19:41:05 by thoberth          #+#    #+#             */
+/*   Updated: 2022/01/03 20:33:55 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-# define BASE_HPP
+#include <iostream>
 
-# include <iostream>
-# include <string>
-# include <stdlib.h>
-
-class Base
+template <typename T>
+class Array
 {
-	public:
-		virtual ~Base() { }; 
+    private :
+        unsigned int _length;
+        T * tab;
+    public :
+        Array()
+        {
+            T *tab[0];
+        }
+        Array( Array const & src );
+        Array( unsigned int length );
+        ~Array();
 };
-
-#endif /* ************************************************************ BASE_H */

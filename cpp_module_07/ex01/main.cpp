@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/28 17:16:27 by thoberth          #+#    #+#             */
-/*   Updated: 2022/01/03 18:51:45 by thoberth         ###   ########.fr       */
+/*   Created: 2022/01/03 19:09:42 by thoberth          #+#    #+#             */
+/*   Updated: 2022/01/03 19:34:12 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-# define BASE_HPP
+#include "iter.hpp"
 
-# include <iostream>
-# include <string>
-# include <stdlib.h>
-
-class Base
+int main()
 {
-	public:
-		virtual ~Base() { }; 
-};
+    int tab[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-#endif /* ************************************************************ BASE_H */
+    std::cout << "iter avec un tableau de int" << std::endl;
+
+    iter(tab, 10, &print);
+
+    std::string tab2[5] = {"salut", "moi", "c'est", "thomas", "!"};
+
+    std::cout << "iter avec un tableau de string" << std::endl;
+
+    iter(tab2, 5 , &print); 
+}

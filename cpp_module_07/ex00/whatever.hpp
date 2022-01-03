@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/28 17:16:27 by thoberth          #+#    #+#             */
-/*   Updated: 2022/01/03 18:51:45 by thoberth         ###   ########.fr       */
+/*   Created: 2022/01/03 12:57:25 by thoberth          #+#    #+#             */
+/*   Updated: 2022/01/03 19:02:41 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-# define BASE_HPP
+#include <iostream>
 
-# include <iostream>
-# include <string>
-# include <stdlib.h>
-
-class Base
+template <typename T>
+void    swap(T & arg1, T & arg2)
 {
-	public:
-		virtual ~Base() { }; 
-};
+    T tmp;
+    tmp = arg2;
+    arg2 = arg1;
+    arg1 = tmp;
+}
 
-#endif /* ************************************************************ BASE_H */
+template <typename T>
+T   min(T val1, T val2)
+{
+    if ( (val1 > val2) || (val1 == val2) )
+        return val2;
+    return val1;
+}
+
+template <typename T>
+T   max(T val1, T val2)
+{
+    if ( (val2 > val1) || (val1 == val2) )
+        return (val2);
+    return (val1);
+}

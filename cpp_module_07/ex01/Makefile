@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 12:44:03 by thoberth          #+#    #+#              #
-#    Updated: 2022/01/03 11:50:03 by thoberth         ###   ########.fr        #
+#    Updated: 2022/01/03 19:06:02 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,22 +23,24 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME = base
+NAME = executable
 
-SRCS = main.cpp ClassA.cpp ClassB.cpp ClassC.cpp
+SRC = main.cpp
 
-HDR = Base.hpp ClassA.hpp ClassB.hpp ClassC.hpp
+HDR = iter.hpp
 
-OBJS = ${SRCS:.cpp=.o}
+OBJS = ${SRC:.cpp=.o}
 
-$(NAME): ${OBJS} ${HDR} ${SRCS}
+all: ${NAME}
+
+main.o : ${HDR}
+
+${NAME}: ${OBJS} ${HDR}
 	@printf "\n$(BLUE)"
 	@printf "$(BLUE)Compiling files...\n"
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 	@printf "$(GREEN)[$(NAME) done][✔]$(RESET)\n"
 	@printf "\n"
-
-all: ${NAME}
 
 clean:
 	@printf "\n"

@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 17:28:23 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/29 19:48:51 by thoberth         ###   ########.fr       */
+/*   Updated: 2022/01/03 18:51:41 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,29 @@ void identify(Base & p)
     //identify(&p); very easy.... else :
     try
     {
-        if (ClassA & b = dynamic_cast<ClassA&>(p))
-            std::cout << "A\n";
-        else if (dynamic_cast<ClassB&>(p))
-            std::cout << "B\n";
-        else if (dynamic_cast<ClassC&>(p))
-            std::cout << "C\n";
+        p = dynamic_cast<ClassA&>(p);
+        std::cout << "A\n";
     }
     catch(const std::exception& e)
     {
-        std::cerr << "Bad Cast" << '\n';
+        try
+        {
+            p = dynamic_cast<ClassB&>(p);
+            std::cout << "B\n";
+        }
+        catch(const std::exception& e)
+        {
+            try
+            {
+                p = dynamic_cast<ClassC&>(p);
+                std::cout << "C\n";
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << "No match found" << '\n';
+            }
+        }
     }
-    
 }
 
 int main()
