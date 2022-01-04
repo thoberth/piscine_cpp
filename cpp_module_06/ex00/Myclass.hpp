@@ -6,7 +6,7 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 10:32:44 by thoberth          #+#    #+#             */
-/*   Updated: 2021/12/26 12:17:53 by thoberth         ###   ########.fr       */
+/*   Updated: 2022/01/04 10:36:49 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <iomanip>
 # include <string>
 # include <limits>
+# include <stdlib.h>
 
 
 class Myclass
