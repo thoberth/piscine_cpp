@@ -6,19 +6,25 @@
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 16:47:43 by thoberth          #+#    #+#             */
-/*   Updated: 2022/01/04 18:11:40 by thoberth         ###   ########.fr       */
+/*   Updated: 2022/01/05 19:52:37 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
+
 #include <iostream>
+#include <algorithm>
 
 template <typename T>
-void	easyfind(T *t, int index)
+void	easyfind(T & t, const int match)
 {
-	int i(0);
-
-	while ( (T[i] != index) || (T[i]) )
-	{
-		
-	}
+	typename T::iterator it;
+	it = find(t.begin(), t.end(), match);
+	if (*it == match)
+		std::cout << "Match found! " << match << std::endl;
+	else
+		std::cerr << "No match found!" << std::endl;
 }
+
+#endif

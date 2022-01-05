@@ -6,7 +6,7 @@
 #    By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 12:44:03 by thoberth          #+#    #+#              #
-#    Updated: 2022/01/05 10:33:36 by thoberth         ###   ########.fr        #
+#    Updated: 2021/12/17 15:20:58 by thoberth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,15 +25,11 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 NAME = executable
 
-SRCS = main.cpp
+SRCS = .cpp
 
-HDR = easyfind.hpp
+HDR = .hpp
 
 OBJS = ${SRCS:.cpp=.o}
-
-all: ${NAME}
-
-main.o : ${HDR}
 
 $(NAME): ${OBJS} ${HDR} ${SRCS}
 	@printf "\n$(BLUE)"
@@ -41,6 +37,8 @@ $(NAME): ${OBJS} ${HDR} ${SRCS}
 	${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 	@printf "$(GREEN)[$(NAME) done][✔]$(RESET)\n"
 	@printf "\n"
+
+all: ${NAME}
 
 clean:
 	@printf "\n"
