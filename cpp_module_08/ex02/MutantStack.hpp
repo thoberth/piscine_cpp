@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Mutantstack.hpp                                    :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thoberth <thoberth@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 19:50:33 by thoberth          #+#    #+#             */
-/*   Updated: 2022/01/05 20:07:25 by thoberth         ###   ########.fr       */
+/*   Updated: 2022/01/06 16:15:26 by thoberth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,30 @@
 # include <algorithm>
 # include <stack>
 
-class Mutantstack : public std::stack<class T>
+template<typename T>
+class MutantStack : public std::stack<T>
 {
 	public:
-		Mutantstack();
-		Mutantstack( Mutantstack const & src );
-		~Mutantstack();
+		MutantStack() {}
+		MutantStack( MutantStack const & src ) { *this = src; }
+		~MutantStack() {}
 
-		Mutantstack &		operator=( Mutantstack const & rhs );
-	private:
+		typedef typename std::stack<T>::container_type::iterator	iterator;
 
+		iterator	begin()
+		{
+			return (this->c.begin());
+		}
+		iterator	end()
+		{
+			return (this->c.end());
+		}
+
+		MutantStack &			operator=( MutantStack const & rhs )
+		{
+			this->c = rhs.c;
+			return (*this);
+		}
 };
 
-#endif /* ***************************************************** MUTANTSTACK_H */
+#endif /* ***************************************************** MutantStack_H */
